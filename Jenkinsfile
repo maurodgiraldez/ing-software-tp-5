@@ -19,9 +19,21 @@ pipeline {
       }
     }
 
+    stage('Jacoco') {
+      steps {
+        sh './gradlew -i test jacocoTestReport'
+      }
+    }
+
+    stage('SonarQube') {
+      steps {
+        sh 'echo SonarQube'
+      }
+    }
+
     stage('Deploy') {
       steps {
-        sh 'echo Deploy run satisfactory'
+        sh 'echo Deployado maquina'
       }
     }
 
