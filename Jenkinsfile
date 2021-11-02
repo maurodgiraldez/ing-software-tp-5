@@ -4,10 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         git(url: 'https://github.com/maurodgiraldez/ing-software-tp-5', branch: 'master')
-        withGradle() {
-          sh 'gradle build'
-        }
-
+        sh './gradlew build'
         sh 'echo Build satisfactory'
       }
     }
