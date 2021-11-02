@@ -6,6 +6,10 @@ pipeline {
         git(url: 'https://github.com/maurodgiraldez/ing-software-tp-5', branch: 'master')
         sh 'echo Build satisfactory'
         sh 'gradle build'
+        withGradle() {
+          sh 'gradle build'
+        }
+
       }
     }
 
