@@ -8,6 +8,5 @@ services:
 
   sonarqube:
     image: sonarqube
-    platform: linux/x86_64
     ports: 
       - "9000:9000"
